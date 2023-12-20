@@ -6,8 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "json": "json-server --watch db.json -p 9999"
+    "lint": "next lint"
   },
   "dependencies": {
     "react": "^18",
