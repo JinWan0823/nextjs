@@ -30,7 +30,7 @@ export default function Update(){
         body : JSON.stringify({title,body})
       }
 
-      fetch('http://localhost:9999/topics/'+params.id,options)
+      fetch(process.env.NEXT_PUBLIC_API_URL+"topics"+params.id,options)
         .then(res => res.json())
         .then(result =>{
           console.log(result);

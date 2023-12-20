@@ -1,7 +1,7 @@
 // 사용자와 상호작용 x -> Server Component
 
 export default async function Read(props){
-  const res = await fetch(`http://localhost:9999/topics/${props.params.id}`,{cache:'no-store'});
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL+"topics"}/${props.params.id}`,{cache:'no-store'});
   const topic = await res.json();
   return (
     <>
