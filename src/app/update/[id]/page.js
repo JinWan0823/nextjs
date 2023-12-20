@@ -9,7 +9,7 @@ export default function Update(){
   const [title,setTitle] = useState('');
   const [body,setBody] = useState('');
   useEffect(()=>{
-    fetch(`http://localhost:9999/topics/${params.id}`)
+    fetch(`https://pretty-flannel-spirit.glitch.me/topics/${params.id}`)
       .then(res => res.json())
       .then((result) => {
         setTitle(result.title);
@@ -30,7 +30,7 @@ export default function Update(){
         body : JSON.stringify({title,body})
       }
 
-      fetch(process.env.NEXT_PUBLIC_API_URL+"topics"+params.id,options)
+      fetch("https://pretty-flannel-spirit.glitch.me/topics/"+params.id,options)
         .then(res => res.json())
         .then(result =>{
           console.log(result);

@@ -18,7 +18,7 @@ export default function Create(){
         body : JSON.stringify({title,body})
       }
 
-      fetch(process.env.NEXT_PUBLIC_API_URL+"topics",options)
+      fetch("https://pretty-flannel-spirit.glitch.me/topics",options)
         .then(res => res.json())
         .then(result =>{
           console.log(result);

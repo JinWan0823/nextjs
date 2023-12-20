@@ -14,7 +14,7 @@ export function Controll() {
   }
 
   const deleteDB = ()=>{
-    fetch(process.env.NEXT_PUBLIC_API_URL+"topics"+id, options)
+    fetch("https://pretty-flannel-spirit.glitch.me/topics/"+id, options)
       .then(res=>res.json())
       .then((result)=>{
         console.log(result);

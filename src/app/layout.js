@@ -9,9 +9,10 @@ export const metadata = {
 }
 
 export default async function RootLayout({ children }) {
-    const response = await fetch(process.env.NEXT_PUBLIC_API_URL+"topics",{cache:"no-store"});
+    const response = await fetch('https://pretty-flannel-spirit.glitch.me/'+"topics",{cache:"no-store"});
     // const response = await fetch("http://localhost:9999/topics",{next:{revalidate:0}});
     const topics = await response.json();
+    console.log(topics)
   return (
     <html>
       <body>
