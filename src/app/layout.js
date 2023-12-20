@@ -1,4 +1,5 @@
 //"use client";
+import { Controll } from "./Controll";
 import "./globals.css";
 import Link from "next/link";
 
@@ -23,17 +24,7 @@ export default async function RootLayout({ children }) {
           })}
         </ol>
         {children}
-        <ul>
-          <li>
-            <Link href="/create">Create</Link>
-          </li>
-          <li>
-            <Link href="/update/1">Create</Link>
-          </li>
-          <li>
-            <input type="button" value={'delete'} />
-          </li>
-        </ul>
+        <Controll />
       </body>
     </html>
   );
